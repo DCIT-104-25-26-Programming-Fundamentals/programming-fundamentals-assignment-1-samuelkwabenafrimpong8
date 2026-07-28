@@ -55,3 +55,40 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+def single_table(number):
+    print(f"\nMultiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i} = {number * i}")
+
+
+# Part B - Print multiplication tables from 1 to N
+def all_tables(n):
+    for num in range(1, n + 1):
+        print(f"\nMultiplication Table for {num}:")
+        for i in range(1, 13):
+            print(f"{num} x {i} = {num * i}")
+        print("---------------------------")
+
+
+def main():
+    # Part A
+    number = int(input("Enter a number: "))
+
+    if number <= 0:
+        print("Error: Number must be a positive integer.")
+        return
+
+    single_table(number)
+
+    # Part B
+    n = int(input("\nEnter N for tables from 1 to N: "))
+
+    if n <= 0:
+        print("Error: N must be a positive integer.")
+        return
+
+    all_tables(n)
+
+
+main()
